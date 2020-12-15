@@ -1,0 +1,32 @@
+<div class="container pt-2">
+  <div class="row">
+    <div class="col">
+        <h4>West Standings</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div *ngFor="let rank of standings">
+            <div *ngIf="rank.conference.name == 'west'">
+              <div *ngFor="let team of nbaTeams">
+                {{printStandings(team, rank)}}  &emsp;  {{ printRecord(team, rank) }}
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col">
+        <h4>East Standings</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div *ngFor="let rank of standings">
+            <div *ngIf="rank.conference.name == 'east'">
+              <div *ngFor="let team of nbaTeams">
+                {{printStandings(team, rank)}}  &emsp;  {{ printRecord(team, rank) }}
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

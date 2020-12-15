@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GetApiService } from "../app/get-api.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'CapZonee';
+  title = 'CapZone';
+  constructor() { }
+
+
+  ngOnInit() { }
+
 }
